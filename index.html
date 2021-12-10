@@ -4,9 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./public/css/style.css">
+    <!--Awesome Font CDN-->
+    <script src="https://kit.fontawesome.com/608ae6f496.js" crossorigin="anonymous"></script>
+    <!-- Google Font -->
+    <!-- Shrikhand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet"> 
+    
     <title>Oh my Food!</title>
 </head>
 <body>
-    
+    <header>
+        <div class="header">
+            <img class="header__logo" src="./public/images/logo/ohmyfood.png" alt="logo Oh my food">
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="location">
+                <i class="location__icon"></i>
+                <p class="location__text">Paris, Belleville</p>
+            </div>
+            <h1 class="heading__title">Réservez le menu qui vous convient</h1>
+            <p class="heading__subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+            <div class="button">Explorer nos restaurants</div>
+        </section>
+        <section class="info">
+            <p class="info__title">Fonctionement</p>
+            <div class="info__step">
+                <div class="info__icon"><i class="fas fa-mobile-alt"></i></div>
+                <p class="info__text">Choississez un restaurant</p>
+            </div>
+            <div class="info__step">
+                <div class="info__icon"><i class="fas fa-list-ul"></i></div>
+                <p class="info__text">Composez votre menu</p>
+            </div>
+            <div class="info__step">
+                <div class="info__icon"><i class="fas fa-store"></i></div>
+                <p class="info__text">Dégustez au restaurant</p>
+            </div>
+        </section>
+        <section>
+            <h2>Restaurants</h2>
+            <div class="restaurant-cards">
+                <img src="" alt="">
+                <div class="restaurant-cards__description">
+                    <h3>La palette du goût</h3>
+                    <span>Menilmontant</span>
+                </div>
+                <div><i class="far fa-heart"></i></div>
+            </div>
+            <div class="restaurant-cards">
+                <img src="" alt="">
+                <div class="restaurant-cards__description">
+                    <h3>La note enchantée</h3>
+                    <span>Charonne</span>
+                </div>
+                <div><i class="far fa-heart"></i></div>
+            </div>
+            <div class="restaurant-cards">
+                <img src="" alt="">
+                <div class="restaurant-cards__description">
+                    <h3>À la française</h3>
+                    <span>Cité Rouge</span>
+                </div>
+                <div><i class="far fa-heart"></i></div>
+            </div>
+            <div class="restaurant-cards">
+                <img src="" alt="">
+                <div class="restaurant-cards__description">
+                    <h3>Le delice des sens</h3>
+                    <span>Folie-Méricourt</span>
+                </div>
+                <div><i class="far fa-heart"></i></div>
+            </div>
+        </section>
+        <footer>
+            <img src="./public/images/logo/ohmyfood.png" alt="Logo Oh my Food">
+            <ul>
+                <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
+                <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
+                <li>Mentions légales</li>
+                <li>Contact</li>
+            </ul>
+        </footer>
+    </main>
 </body>
 </html>
