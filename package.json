@@ -1,0 +1,13 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet3-dynamisez une page web avec des animations CSS",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./public/sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed"
+  },
+  "browserslist": "last 4 versions",
+  "author": "Da Rocha Matthieu",
+  "license": "ISC"
+}
