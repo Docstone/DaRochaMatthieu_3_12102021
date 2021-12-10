@@ -20,12 +20,18 @@
     <title>Oh my Food!</title>
 </head>
 <body>
+
+                              <!-- HEADER -->
+
     <header>
         <div class="header">
             <img class="header__logo" src="./public/images/logo/ohmyfood.png" alt="logo Oh my food">
         </div>
     </header>
     <main>
+
+                                <!-- PAGE TITLE -->
+
         <section>
             <div class="location">
                 <i class="location__icon"></i>
@@ -35,6 +41,9 @@
             <p class="heading__subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
             <div class="button">Explorer nos restaurants</div>
         </section>
+
+                                 <!-- INFO -->
+
         <section class="info">
             <p class="info__title">Fonctionement</p>
             <div class="info__step">
@@ -50,48 +59,54 @@
                 <p class="info__text">Dégustez au restaurant</p>
             </div>
         </section>
-        <section>
+
+                            <!-- RESTAURANTS -->
+
+        <section class="restaurant">
             <h2>Restaurants</h2>
-            <div class="restaurant-cards">
-                <img src="" alt="">
-                <div class="restaurant-cards__description">
-                    <h3>La palette du goût</h3>
-                    <span>Menilmontant</span>
+            <div class="restaurant__card">
+                <img class="restaurant__card-img" src="" alt="">
+                <div class="restaurant__card-description">
+                    <h3 class="restaurant__card-restaurant-name">La palette du goût</h3>
+                    <span class="restaurant__card-restaurant-loc">Menilmontant</span>
                 </div>
-                <div><i class="far fa-heart"></i></div>
+                <div class="restaurant__card-favicon"><i class="far fa-heart"></i></div>
             </div>
-            <div class="restaurant-cards">
-                <img src="" alt="">
-                <div class="restaurant-cards__description">
-                    <h3>La note enchantée</h3>
-                    <span>Charonne</span>
+            <div class="restaurant__card">
+                <img class="restaurant__card-img" src="" alt="">
+                <div class="restaurant-card-description">
+                    <h3 class="restaurant-card-restaurant-name">La note enchantée</h3>
+                    <span class="restaurant__card_restaurant-loc">Charonne</span>
                 </div>
-                <div><i class="far fa-heart"></i></div>
+                <div class="restaurant__card-favicon"><i class="far fa-heart"></i></div>
             </div>
-            <div class="restaurant-cards">
-                <img src="" alt="">
-                <div class="restaurant-cards__description">
-                    <h3>À la française</h3>
-                    <span>Cité Rouge</span>
+            <div class="restaurant__cards">
+                <img class="restaurant__card-img" src="" alt="">
+                <div class="restaurant__card-description">
+                    <h3 class="restaurant__card-restaurant-name">À la française</h3>
+                    <span class="restaurant__card-restaurant-loc">Cité Rouge</span>
                 </div>
-                <div><i class="far fa-heart"></i></div>
+                <div class="restaurant__card-favicon"><i class="far fa-heart"></i></div>
             </div>
-            <div class="restaurant-cards">
-                <img src="" alt="">
-                <div class="restaurant-cards__description">
-                    <h3>Le delice des sens</h3>
-                    <span>Folie-Méricourt</span>
+            <div class="restaurant__cards">
+                <img class="restaurant__card-img" src="" alt="">
+                <div class="restaurant__card-description">
+                    <h3 class="restaurant__card-restaurant-name">Le delice des sens</h3>
+                    <span class="restaurant__card-restaurant-loc">Folie-Méricourt</span>
                 </div>
-                <div><i class="far fa-heart"></i></div>
+                <div class="restaurant__card-fav-icon"><i class="far fa-heart"></i></div>
             </div>
         </section>
-        <footer>
-            <img src="./public/images/logo/ohmyfood.png" alt="Logo Oh my Food">
-            <ul>
-                <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
-                <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
-                <li>Mentions légales</li>
-                <li>Contact</li>
+
+                                <!-- FOOTER -->
+
+        <footer class="footer">
+            <img class="footer__logo" src="./public/images/logo/ohmyfood.png" alt="Logo Oh my Food">
+            <ul class="footer__menu">
+                <li class="footer__item"><i class="fas fa-utensils"></i>Proposer un restaurant</li>
+                <li class="footer__item"><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
+                <li class="footer__item">Mentions légales</li>
+                <li class="footer__item">Contact</li>
             </ul>
         </footer>
     </main>
