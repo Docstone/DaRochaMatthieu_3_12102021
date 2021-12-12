@@ -1,0 +1,33 @@
+.footer{
+    background: $color-bg-dark;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+
+    &__logo{
+        font-family: Shrikhand;
+        font-size: 1.3rem;
+        color: invert($color-bg-dark);
+    }
+
+    &__menu{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        color: invert($color-bg-dark);
+
+    }
+
+    &__item{
+        color: invert($color-bg-dark);
+        margin-bottom: .8rem;
+        font-size: 1.1rem;
+    }
+
+
+    &__icon{
+        margin-right: 20px;
+        &--less-padding{
+            margin-right: 18px;
+        } 
+    }
+}
