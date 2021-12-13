@@ -1,0 +1,96 @@
+.background{
+    & img{
+        width: 100%;
+        max-height: 45vh;
+        object-fit: cover;
+        z-index: -1;
+    }
+}
+
+.menu{
+    padding: 1rem .5rem 1rem;
+    z-index: 0;
+    border-radius: 45px 45px 0 0;
+    margin-top: -50px;
+    background: $color-bg-light;
+    position: relative;
+    
+    &__restaurant{
+        font-size: $title-size;
+    }
+    
+    &__title{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        & > i {
+            scale: 1.2;
+        }
+    }
+
+    &__section{
+        display: flex;
+        flex-direction: column;
+        margin: 0 .5rem;
+
+        &__name{
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            color: lighten($color-bg-dark, 10%);
+            width: fit-content;
+            letter-spacing: -0.02rem;
+            
+            &::after{
+                content: '';
+                display: block;
+                width: 2.7rem;
+                height: 3px;
+                background: $color-tertiary;
+                margin-top: .3rem;
+            }
+        }    
+    }
+
+
+
+    &__item{
+            @include shadow;
+            background: $color-bg-lighter;
+            border-radius: 20px;
+            padding: .5rem;
+            margin-bottom: 1rem;
+    }
+    
+    &__item-name{
+        font-size: 1.2rem;
+        margin: .3rem;
+        padding-right: 20px;
+        overflow:hidden; 
+        white-space:nowrap; 
+        text-overflow: ellipsis;
+    }
+
+    &__bloc-description{
+        display: flex;
+        justify-content: space-between;
+        margin: .3rem 1rem .3rem .3rem;
+        color: $color-bg-dark;
+    }
+
+    &__item-description{
+        width: 38ch;
+        padding-right: 20px;
+        overflow:hidden; 
+        white-space:nowrap; 
+        text-overflow: ellipsis;
+    }
+}
+
+.order{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+}

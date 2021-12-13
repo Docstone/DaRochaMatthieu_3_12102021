@@ -1,7 +1,6 @@
 .button{
     padding: 1em 1.5em;
     border-radius: 25px;
-    margin: .8em 0 3em 0;
     font-weight: 500;
     font-size: .98em;
     position: relative;
@@ -12,6 +11,11 @@
     @include shadow;
     overflow: visible;
     
+    &--order{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
     &::after{
         content: "";
         border-radius: 25px;
@@ -35,7 +39,7 @@
         width: 100%;
         height: 100%;
         opacity: 0;
-        background:$color-secondary;
+        background: linear-gradient( lighten($color-secondary, 5%), lighten($color-primary, 5%));
         transition: transform 250ms ease-in-out;
         transform: scaleX(0);
         transform-origin: center;

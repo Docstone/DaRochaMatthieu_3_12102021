@@ -3,7 +3,7 @@
     padding: 2rem 1.5rem 1.5rem 1.5rem;
 
     &__logo{
-        font-family: Shrikhand;
+        @include font-title;
         font-size: 1.3rem;
         color: invert($color-bg-dark);
     }
