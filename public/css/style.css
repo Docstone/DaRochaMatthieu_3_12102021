@@ -383,7 +383,7 @@ html {
   height: 100%;
   opacity: 0;
   box-shadow: rgba(0, 0, 0, 0.739) 8px 8px 18px;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 .button::before {
   content: "";
@@ -396,7 +396,7 @@ html {
   height: 100%;
   opacity: 0;
   background: linear-gradient(#ff93e1, #a16be0);
-  transition: transform 250ms ease-in-out;
+  transition: transform 300ms ease-in-out;
   transform: scaleX(0);
   transform-origin: center;
 }
@@ -435,6 +435,7 @@ html {
   justify-content: space-around;
 }
 .menu__title > i {
+  cursor: pointer;
   scale: 1.2;
 }
 .menu__section {
@@ -446,7 +447,6 @@ html {
   font-size: 1.1rem;
   text-transform: uppercase;
   color: #4f4f4f;
-  width: fit-content;
   letter-spacing: -0.02rem;
 }
 .menu__section__name::after {
@@ -458,32 +458,72 @@ html {
   margin-top: 0.3rem;
 }
 .menu__item {
+  max-height: 20rem;
+  display: flex;
+  overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.075) 5px 5px 5px;
   background: #f6f6f6;
   border-radius: 20px;
-  padding: 0.5rem;
   margin-bottom: 1rem;
+  cursor: pointer;
+}
+.menu__item:hover > .menu__icon {
+  width: 4.5rem;
+  transform: translateX(4.5rem);
+  transform: scale(1.1);
+}
+.menu__item:hover > .menu__icon > .menu__icon--circle {
+  transition: 400ms ease-in-out;
+  transition-delay: 350ms;
+  transform: rotate(360deg);
+}
+.menu__text {
+  width: 100%;
+  min-width: 0;
 }
 .menu__item-name {
   font-size: 1.2rem;
-  margin: 0.3rem;
-  padding-right: 20px;
+  margin: 1rem 1rem 0 1rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  min-width: none;
 }
 .menu__bloc-description {
   display: flex;
   justify-content: space-between;
-  margin: 0.3rem 1rem 0.3rem 0.3rem;
+  margin: 0.5rem 1rem 0.8rem 1rem;
   color: #353535;
 }
 .menu__item-description {
-  width: 38ch;
-  padding-right: 20px;
+  font-size: 0.9rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  padding-right: 1rem;
+}
+.menu__icon {
+  width: 0;
+  background: #99E2D0;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #99E2D0;
+  transform: translateX(4.5rem);
+  transition: all 600ms ease-in-out;
+  transform-origin: right;
+}
+.menu__icon--circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50px;
+  transform: rotate(0deg);
+  scale: 0.8;
 }
 
 .order {
