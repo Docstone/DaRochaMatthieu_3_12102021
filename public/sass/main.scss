@@ -1,20 +1,18 @@
-
 @import "./utils/variables";
-@import "./utils/functions";
 @import "./utils/mixins";
 
 @import "./base/normalize";
 @import "./base/typography";
 
 @import "./components/button";
+@import "./components/favicon";
+@import "./components/spinner";
 
 @import "./pages/menus";
 @import "./pages/accueil";
 
 @import "./layout/footer";
-@import "./layout/form";
+
 @import "./layout/header";
 @import "./layout/navigation";
-@import "./layout/cta";
-@import "./layout/info";
-@import "./layout/restaurants"
+

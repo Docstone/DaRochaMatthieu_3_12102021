@@ -40,7 +40,7 @@
         height: 100%;
         opacity: 0;
         background: linear-gradient( lighten($color-secondary, 5%), lighten($color-primary, 5%));
-        transition: transform 300ms ease-in-out;
+        transition: transform 200ms ease-in-out;
         transform: scaleX(0);
         transform-origin: center;
     }
