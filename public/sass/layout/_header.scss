@@ -1,5 +1,6 @@
 .header{
-    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -8,12 +9,13 @@
         height: 2rem;
         margin-left: auto;
         margin-right: auto;
+        &--menu{
+            padding-right: 3.15rem;
+        }
     }
     &__nav-arrow{
         color: black;
         margin: 1rem;
-        position: absolute;
-        top: .5rem;
-        left: .5rem;
+        position: relative;
     }
 }

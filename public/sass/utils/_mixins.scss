@@ -5,3 +5,11 @@
 @mixin font-title {
     font-family: "Shrikhand", cursive;
 }
+
+@mixin tablet-size {
+    @media (min-width: 768px) { @content; }
+}
+
+@mixin desktop-size {
+    @media (min-width: 990px) { @content; }
+}

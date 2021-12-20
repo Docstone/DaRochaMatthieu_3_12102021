@@ -30,13 +30,13 @@
             </div>
         </header>
         <main>
-            <section>
-                <div class="location">
-                    <div class="location__icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <p class="location__text">Paris, Belleville</p>
-                </div>
-
-                <div class="heading-info-cont">
+            <div class="location">
+                <div class="location__icon"><i class="fas fa-map-marker-alt"></i></div>
+                <p class="location__text">Paris, Belleville</p>
+            </div>
+            
+            <div class="heading-info-cont">
+                <section>
                     <div class="heading">
                         <h1 class="heading__title">Réservez le menu qui vous convient</h1>
                         <p class="heading__subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
@@ -67,61 +67,68 @@
                 <section id="restaurants" class="restaurant">
                     <div class="restaurant__card-container">
                         <h2 class="restaurant__title">Restaurants</h2>
-                        <div class="restaurant__card restaurant__card--new">
-                            <a href="./menu-la-palette.html">
-                                <img class="restaurant__card-img" src="./public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
-                            </a>
-                            <div class="restaurant__card-description">
-                                <div class="restaurant__card-text">
-                                    <a href="./menu-la-palette.html">
-                                        <h3 class="restaurant__card-restaurant-name">La palette du goût</h3>
-                                        <span class="restaurant__card-restaurant-loc">Menilmontant</span>
-                                    </a>
-                                </div>
-                                <div class="restaurant__card-favicon"><div class="favicon favicon--index"></div><i class="far fa-heart fa-lg"></i></div>
-                            </div>
-                        </div>
-                        <div class="restaurant__card restaurant__card--new">
-                            <a href="./menu-la-note.html">
-                                <img class="restaurant__card-img restaurant__card-img--center" src="./public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
-                            </a>
+
+                        <div class="card-wrap">
+                            <div class="restaurant__card restaurant__card--new">
+                                <a href="./menu-la-palette.html">
+                                    <img class="restaurant__card-img" src="./public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                                </a>
                                 <div class="restaurant__card-description">
-                                    <a href="./menu-la-note.html">
-                                        <div class="restaurant__card-text">
-                                            <h3 class="restaurant__card-restaurant-name">La note enchantée</h3>
-                                            <span class="restaurant__card-restaurant-loc">Charonne</span>
-                                        </div>
-                                    </a>
+                                    <div class="restaurant__card-text">
+                                        <a href="./menu-la-palette.html">
+                                            <h3 class="restaurant__card-restaurant-name">La palette du goût</h3>
+                                            <span class="restaurant__card-restaurant-loc">Menilmontant</span>
+                                        </a>
+                                    </div>
                                     <div class="restaurant__card-favicon"><div class="favicon favicon--index"></div><i class="far fa-heart fa-lg"></i></div>
                                 </div>
                             </div>
-                            <div class="restaurant__card">
-                                <a href="./menu-la-francaise.html">
-                                    <img class="restaurant__card-img" src="./public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+                            
+                            <div class="restaurant__card restaurant__card--new">
+                                <a href="./menu-la-note.html">
+                                    <img class="restaurant__card-img restaurant__card-img--center" src="./public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
                                 </a>
-                                <div class="restaurant__card-description">
+                                    <div class="restaurant__card-description">
+                                        <a href="./menu-la-note.html">
+                                            <div class="restaurant__card-text">
+                                                <h3 class="restaurant__card-restaurant-name">La note enchantée</h3>
+                                                <span class="restaurant__card-restaurant-loc">Charonne</span>
+                                            </div>
+                                        </a>
+                                        <div class="restaurant__card-favicon"><div class="favicon favicon--index"></div><i tabindex="0" class="far fa-heart fa-lg"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-wrap">    
+                                <div class="restaurant__card">
                                     <a href="./menu-la-francaise.html">
-                                        <div class="restaurant__card-text">
-                                            <h3 class="restaurant__card-restaurant-name">À la française</h3>
-                                            <span class="restaurant__card-restaurant-loc">Cité Rouge</span>
-                                        </div>
+                                        <img class="restaurant__card-img" src="./public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
                                     </a>
-                                    <div class="restaurant__card-favicon"><div class="favicon favicon--index"></div><i class="far fa-heart fa-lg"></i></div>
+                                    <div class="restaurant__card-description">
+                                        <a href="./menu-la-francaise.html">
+                                            <div class="restaurant__card-text">
+                                                <h3 class="restaurant__card-restaurant-name">À la française</h3>
+                                                <span class="restaurant__card-restaurant-loc">Cité Rouge</span>
+                                            </div>
+                                        </a>
+                                        <div class="restaurant__card-favicon"><div class="favicon favicon--index"></div><i class="far fa-heart fa-lg"></i></div>
+                                    </div>
                                 </div>
-                            </div>
-                
-                            <div class="restaurant__card">
-                                <a href="./menu-le-delice.html" class="restaurant__link">
-                                    <img class="restaurant__card-img" src="./public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
-                                </a>
-                                <div class="restaurant__card-description">
-                                    <a href="./menu-le-delice.html">
-                                        <div class="restaurant__card-text">
-                                            <h3 class="restaurant__card-restaurant-name">Le delice des sens</h3>
-                                            <span class="restaurant__card-restaurant-loc">Folie-Méricourt</span>
-                                        </div>
+    
+                                <div class="restaurant__card">
+                                    <a href="./menu-le-delice.html" class="restaurant__link">
+                                        <img class="restaurant__card-img" src="./public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
                                     </a>
-                                    <div class="restaurant__card-favicon"><div class="favicon favicon--index"></div><i class="far fa-heart fa-lg"></i></div>
+                                    <div class="restaurant__card-description">
+                                        <a href="./menu-le-delice.html">
+                                            <div class="restaurant__card-text">
+                                                <h3 class="restaurant__card-restaurant-name">Le delice des sens</h3>
+                                                <span class="restaurant__card-restaurant-loc">Folie-Méricourt</span>
+                                            </div>
+                                        </a>
+                                        <div class="restaurant__card-favicon"><div class="favicon favicon--index"></div><i class="far fa-heart fa-lg"></i></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

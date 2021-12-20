@@ -4,12 +4,6 @@
     transform-origin: 10px 10px;
     cursor: pointer;
 
-
-
-    &--index{
-        bottom: 1px;
-    } 
-
     &--menu{
         bottom: 10px;
        }
@@ -38,8 +32,8 @@
     }
 }
 
-    .restaurant__card-favicon, .menu__title{
-        &:active{
+    .wrap__favicon, .restaurant__card-favicon{
+        &:hover{
             & .favicon{
                 animation: fav-anim 500ms 200ms ease-in-out forwards reverse;
                 
