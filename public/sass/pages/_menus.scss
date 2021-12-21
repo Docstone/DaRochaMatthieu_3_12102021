@@ -65,6 +65,9 @@
         flex-direction: column;
         margin: 0 auto;
         max-width: 29rem;
+        @include desktop-size{
+            width: 31%;
+        }
 
         &__name{
             font-size: 1.1rem;
@@ -94,10 +97,12 @@
         cursor: pointer;
         opacity: 0;
         @include desktop-size{
-            width: 20rem;
+            width: 100%;
+            margin-bottom: 1.5rem;
         }
 
         &:hover > .menu__icon{
+            position: relative;
             width: 4.6rem;
             transform: translate(0rem);
 
@@ -120,7 +125,6 @@
         overflow:hidden; 
         white-space:nowrap; 
         text-overflow: ellipsis;
-        min-width: none;
         @include desktop-size{
             font-size: 1.1rem;
         }
@@ -143,12 +147,12 @@
 
     &__icon{
         width: 0;
-        background: $color-tertiary;
         border-radius: 0 20px 20px 0;
+        color: $color-tertiary;
+        background-color: $color-tertiary;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: $color-tertiary;
         transform: translateX(2rem);
         transition: all 600ms ease-in-out;
         
@@ -163,7 +167,6 @@
             height: 1.3rem;
             border-radius: 50px;
             transform: rotate(0deg);
-            scale: .8;
         }
     }
 }
@@ -188,7 +191,7 @@
 @keyframes fadeIn {
     0%{
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(50px);
     }
     50%{
         opacity: 1;

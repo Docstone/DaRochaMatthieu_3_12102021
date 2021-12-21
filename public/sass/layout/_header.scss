@@ -9,13 +9,11 @@
         height: 2rem;
         margin-left: auto;
         margin-right: auto;
-        &--menu{
-            padding-right: 3.15rem;
-        }
     }
     &__nav-arrow{
         color: black;
-        margin: 1rem;
-        position: relative;
+        padding: 1.5rem;
+        top: 0;
+        position: absolute;
     }
 }

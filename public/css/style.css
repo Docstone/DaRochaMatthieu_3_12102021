@@ -474,7 +474,7 @@ html {
   bottom: 0;
   opacity: 1;
   transform-origin: top;
-  animation: loader 1.5s 1s forwards;
+  animation: loader 2s 1s forwards;
 }
 .loading__spinner {
   height: 20px;
@@ -525,25 +525,25 @@ html {
 }
 @keyframes bounce {
   0% {
-    transform: scaleX(1, 1) translatey(0);
+    transform: scaleX(1) translateY(0);
   }
   10% {
     transform: scale(1.1, 0.9) translate(0);
   }
   30% {
-    transform: scale(0.9, 1.1) translatey(-20px);
+    transform: scale(0.9, 1.1) translateY(-20px);
   }
   50% {
-    transform: scale(1.05, 0.4) translatey(12px);
+    transform: scale(1.1, 0.75) translateY(5px);
   }
   60% {
-    transform: scale(1, 1) translatey(-10px);
+    transform: scale(1) translateY(-5px);
   }
-  67% {
-    transform: scale(1, 1) translate(0);
+  99% {
+    transform: scale(1) translate(0);
   }
   100% {
-    transform: scale(1, 1) translate(0);
+    transform: scale(1) translate(0);
   }
 }
 .background {
@@ -610,6 +610,11 @@ html {
   margin: 0 auto;
   max-width: 29rem;
 }
+@media (min-width: 990px) {
+  .menu__section {
+    width: 31%;
+  }
+}
 .menu__section__name {
   font-size: 1.1rem;
   text-transform: uppercase;
@@ -636,10 +641,12 @@ html {
 }
 @media (min-width: 990px) {
   .menu__item {
-    width: 20rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
   }
 }
 .menu__item:hover > .menu__icon {
+  position: relative;
   width: 4.6rem;
   transform: translate(0rem);
 }
@@ -658,7 +665,6 @@ html {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  min-width: none;
 }
 @media (min-width: 990px) {
   .menu__item-name {
@@ -680,12 +686,12 @@ html {
 }
 .menu__icon {
   width: 0;
-  background: #99E2D0;
   border-radius: 0 20px 20px 0;
+  color: #99E2D0;
+  background-color: #99E2D0;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #99E2D0;
   transform: translateX(2rem);
   transition: all 600ms ease-in-out;
 }
@@ -698,7 +704,6 @@ html {
   height: 1.3rem;
   border-radius: 50px;
   transform: rotate(0deg);
-  scale: 0.8;
 }
 
 .order {
@@ -720,7 +725,7 @@ html {
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(50px);
   }
   50% {
     opacity: 1;
@@ -771,7 +776,7 @@ html {
     flex-flow: row;
     align-items: center;
     justify-content: space-evenly;
-    background: linear-gradient(50deg, #f6f6f6 50%, #fface8, #c9abee 90%);
+    background: linear-gradient(85deg, #f6f6f6 50%, white 51%);
   }
 }
 
@@ -812,7 +817,6 @@ html {
 @media (min-width: 768px) {
   .info {
     margin: 0;
-    scale: 1;
   }
 }
 .info__title {
@@ -849,13 +853,13 @@ html {
     opacity: 0;
   }
   .info__step:nth-child(2) {
-    animation: fadeInRight 700ms 200ms both;
+    animation: fadeInRight 700ms 400ms both;
   }
   .info__step:nth-child(3) {
-    animation: fadeInRight 700ms 300ms both;
+    animation: fadeInRight 700ms 600ms both;
   }
   .info__step:nth-child(4) {
-    animation: fadeInRight 700ms 400ms both;
+    animation: fadeInRight 700ms 800ms both;
   }
 }
 .info__icon {
@@ -913,7 +917,8 @@ html {
 }
 @media (min-width: 768px) {
   .restaurant__card-container {
-    max-width: 90%;
+    max-width: 100%;
+    max-width: 65rem;
   }
 }
 .restaurant__title {
@@ -943,18 +948,8 @@ html {
   .restaurant__card {
     width: 40%;
     max-width: 29rem;
-    min-width: 22rem;
+    min-width: 20rem;
     margin-bottom: 2rem;
-    opacity: 0;
-  }
-  .restaurant__card:first-child {
-    margin-right: 2rem;
-    margin-left: auto;
-    animation: fadeInLeft 1s forwards;
-  }
-  .restaurant__card:last-child {
-    margin-right: auto;
-    animation: fadeInRight 1s forwards;
   }
 }
 .restaurant__card--new {
@@ -976,7 +971,7 @@ html {
 }
 .restaurant__card:hover {
   opacity: 1;
-  scale: 1.1;
+  transform: scale(1.1);
 }
 .restaurant__card-img {
   object-fit: cover;
@@ -1075,7 +1070,6 @@ html {
   flex-direction: column;
   align-items: flex-start;
   padding: 0;
-  color: #cacaca;
 }
 @media (min-width: 768px) {
   .footer__menu {
@@ -1083,9 +1077,11 @@ html {
   }
 }
 .footer__item {
-  color: #cacaca;
   margin-bottom: 0.8rem;
   font-size: 1.1rem;
+}
+.footer__link {
+  color: #cacaca;
 }
 .footer__icon {
   margin-right: 20px;
@@ -1107,13 +1103,11 @@ html {
   margin-left: auto;
   margin-right: auto;
 }
-.header__logo--menu {
-  padding-right: 3.15rem;
-}
 .header__nav-arrow {
   color: black;
-  margin: 1rem;
-  position: relative;
+  padding: 1.5rem;
+  top: 0;
+  position: absolute;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -23,8 +23,9 @@
         display: flex;
         flex-flow: row;
         align-items: center;
-        justify-content: space-evenly;
-        background: linear-gradient(50deg, $color-bg-lighter 50%,lighten($color-secondary, 10%),lighten($color-primary,20%) 90%);
+        justify-content: space-evenly;    
+        background: linear-gradient(85deg, $color-bg-lighter 50%,white 51%);
+        // background: linear-gradient(50deg, $color-bg-lighter 50%,lighten($color-bg-light, 20%),lighten($color-primary,30%) 99%);
     }
 }
 
@@ -63,7 +64,6 @@
     margin: 0 auto;
     @include tablet-size{
         margin: 0;
-        scale: 1;
     }
     
 
@@ -101,7 +101,7 @@
             opacity: 0;
             @for $i from 2 to 5 {
             &:nth-child(#{$i}){
-                animation: fadeInRight 700ms 100ms*($i*1) both;
+                animation: fadeInRight 700ms 200ms*($i*1) both;
             }
         }
         
@@ -168,7 +168,8 @@
         min-width: 15rem;
         margin: 0 auto;
         @include tablet-size{
-            max-width: 90%;
+            max-width: 100%;
+            max-width: 65rem;
         }
     }
     
@@ -197,19 +198,8 @@
         @include tablet-size{
             width: 40%;
             max-width: 29rem;
-            min-width: 22rem;
+            min-width: 20rem;
             margin-bottom: 2rem;
-            opacity: 0;
-
-            &:first-child{
-                margin-right: 2rem;
-                margin-left: auto;
-                animation: fadeInLeft 1s forwards;
-            }
-            &:last-child{
-                margin-right: auto;
-                animation: fadeInRight 1s forwards;
-            }
         }  
 
         &--new{
@@ -233,7 +223,7 @@
 
        &:hover{
            opacity: 1;
-           scale: 1.1;
+           transform: scale(1.1);
        }
     }
 
