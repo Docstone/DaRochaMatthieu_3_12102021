@@ -403,9 +403,6 @@ html {
   transform: scaleX(0);
   transform-origin: center;
 }
-.button:hover {
-  transform: scale(1.2);
-}
 .button:hover::after {
   opacity: 2;
 }
@@ -417,15 +414,25 @@ html {
 .favicon {
   position: relative;
   opacity: 0;
-  transform-origin: 10px 10px;
+  top: 17px;
+  right: 1px;
+  transform-origin: bottom center;
   cursor: pointer;
+  z-index: 5;
+  scale: 1.5;
+}
+@media (max-width: 450px) {
+  .favicon {
+    left: 0;
+    right: 0;
+  }
 }
 .favicon--menu {
-  bottom: 10px;
+  top: 6px;
+  right: 0;
 }
 .favicon::before, .favicon::after {
   position: absolute;
-  top: 8px;
   content: "";
   width: 0.7rem;
   height: 1.1rem;
@@ -446,19 +453,39 @@ html {
 }
 
 .wrap__favicon:hover .favicon, .restaurant__card-favicon:hover .favicon {
-  animation: fav-anim 500ms 200ms ease-in-out forwards reverse;
+  animation: fav-anim 1000ms 200ms ease-in-out forwards;
 }
 .wrap__favicon:hover .favicon + i, .restaurant__card-favicon:hover .favicon + i {
-  animation: fav-anim 500ms ease-in-out forwards;
+  animation: fav-anim-fade 200ms 1000ms ease-in-out forwards;
 }
 
 @keyframes fav-anim {
   0% {
-    transform: scale(1.4);
+    transform: scale(0) translateY(0);
     opacity: 1;
   }
-  20%, 30% {
-    transform: scale(1.5);
+  50% {
+    transform: scale(0.5) translateY(-6px);
+  }
+  60% {
+    transform: scale(0.6) translateY(-6px);
+  }
+  90% {
+    transform: scale(1.1) translateY(-6px);
+  }
+  100% {
+    transform: scale(0.9) translateY(-6px);
+    opacity: 1;
+  }
+}
+@keyframes fav-anim-fade {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1);
   }
   100% {
     transform: scale(0);
@@ -558,7 +585,7 @@ html {
   opacity: 0;
   animation: imageFadeIn 2000ms 300ms forwards;
 }
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .background img {
     border-radius: 0 0 60px 60px;
     max-height: 65vh;
@@ -566,7 +593,7 @@ html {
 }
 
 .menu {
-  padding: 1rem 0.5rem 1rem;
+  padding: 1rem 0.9rem 1rem;
   z-index: 0;
   border-radius: 45px 45px 0 0;
   margin-top: -50px;
@@ -589,20 +616,28 @@ html {
   }
 }
 .menu__title {
-  width: fit-content;
-  margin: 0 auto;
-}
-.menu__restaurant {
-  font-size: 1.9em;
-  padding-right: 2rem;
-}
-.menu__title {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  margin-right: 20px;
+}
+@media (min-width: 620px) {
+  .menu__title {
+    justify-content: center;
+  }
 }
 .menu__title i {
   cursor: pointer;
-  transform: scale(1.4);
+  transform: scale(1.2);
+}
+.menu__restaurant {
+  font-size: 1.9em;
+  padding-right: 10px;
+}
+@media (min-width: 620px) {
+  .menu__restaurant {
+    padding-right: 30px;
+  }
 }
 .menu__section {
   display: flex;
@@ -770,7 +805,7 @@ html {
   color: #353535;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .heading-info-cont {
     display: flex;
     flex-flow: row;
@@ -788,7 +823,7 @@ html {
   min-height: 16rem;
   margin-left: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .heading {
     transform: scale(1.1);
     background: transparent;
@@ -814,7 +849,7 @@ html {
   max-width: 25rem;
   margin: 0 auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .info {
     margin: 0;
   }
@@ -825,7 +860,7 @@ html {
   font-size: 1.9em;
   font-weight: 700;
 }
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .info__title {
     margin-left: 2rem;
   }
@@ -848,7 +883,7 @@ html {
 .info__step:not(:hover) > .info__icon {
   color: #7e7e7e;
 }
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .info__step {
     opacity: 0;
   }
@@ -915,7 +950,7 @@ html {
   min-width: 15rem;
   margin: 0 auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .restaurant__card-container {
     max-width: 100%;
     max-width: 65rem;
@@ -924,13 +959,13 @@ html {
 .restaurant__title {
   font-size: 1.9em;
 }
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .restaurant__title {
     text-align: center;
     margin-bottom: 2.3rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .restaurant .card-wrap {
     display: flex;
     margin-left: auto;
@@ -944,7 +979,7 @@ html {
   transition: ease-in-out 180ms;
   box-shadow: rgba(0, 0, 0, 0.075) 5px 5px 5px;
 }
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .restaurant__card {
     width: 40%;
     max-width: 29rem;
@@ -1060,7 +1095,7 @@ html {
   font-size: 1.3rem;
   color: #cacaca;
 }
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .footer__logo {
     margin-left: 8rem;
   }
@@ -1071,7 +1106,7 @@ html {
   align-items: flex-start;
   padding: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .footer__menu {
     margin-left: 8rem;
   }
